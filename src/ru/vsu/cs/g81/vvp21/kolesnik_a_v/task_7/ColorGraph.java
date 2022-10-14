@@ -26,7 +26,7 @@ public class ColorGraph {
         if (v == graph.vertexCount()) {
             return true;
         }
-        for (int cr = 1; cr <= m; cr++) {
+        for (int cr = 0; cr <= m; cr++) {
             if (isSafe(v, cr)) {
                 colors[v] = cr;
                 if (graphColorUtil(m, v + 1)) {
@@ -52,4 +52,9 @@ public class ColorGraph {
             System.out.println("Vertex " + i + " have color " + colors[i]);
         }
     }
+
+    public int[] getColors(){
+        return colors;
+    }
 }
+//обход ширину
